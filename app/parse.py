@@ -41,7 +41,7 @@ def get_all_courses() -> list[Course]:
     return [parse_course(course) for course in courses]
 
 
-def write_course(path_name: str, courses: list[Course]):
+def write_course(path_name: str, courses: list[Course]) -> None:
     with open(path_name, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(COURSE_FIELDS)
